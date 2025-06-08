@@ -1,1 +1,1 @@
-Functions, Data Structures and Modules
+Data structures and functions
