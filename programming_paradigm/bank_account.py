@@ -24,4 +24,3 @@ class BankAccount:
     def display_balance(self):
         print(f"{self.owner}'s account balance: ${self.balance}")
 
-
