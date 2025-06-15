@@ -1,26 +1,32 @@
 # bank_account.py
 
 class BankAccount:
-    def _init_(self, owner, balance=0):
-        self.owner = owner
-        self.balance = balance
+
+    """
+    A class that performs banking operations.
+    """
+
+    def __init__(self, account_balance=0):
+        """Initialize account balance"""
+        self.account_balance = account_balance
 
     def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"Deposited ${amount}. New balance: ${self.balance}")
-        else:
-            print("Deposit amount must be positive.")
+        """Deposit amount to account balance"""
+        self.account_balance += amount
 
     def withdraw(self, amount):
-        if amount > self.balance:
-            print("Insufficient funds.")
-        elif amount <= 0:
-            print("Withdrawal amount must be positive.")
+        """Withdraw amount from account balance.
+        If insufficient balance, return False
+        """
+        if amount > self.account_balance:
+            return False
         else:
-            self.balance -= amount
-            print(f"Withdrew ${amount}. New balance: ${self.balance}")
+            self.account_balance -= amount
+            return True
 
     def display_balance(self):
-        print(f"{self.owner}'s account balance: ${self.balance}")
+        """Display current account balance"""
+        print(f"Current Balance: ${self.account_balance:.2f}")
 
+
+def safe_divide(numerator, denominator):

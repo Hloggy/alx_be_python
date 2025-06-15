@@ -1,10 +1,13 @@
-# robust_division_calculator.py
+robust_division_calculator.py    
 
-def safe_divide(numerator, denominator):
-    try:
-        result = float(numerator) / float(denominator)
-        return f"Result: {result}"
+try:
+        num = float(numerator)
+        denom = float(denominator)
+
+        result = num / denom
+        return f"The result of the division is {result}"
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     except ValueError:
-        return "Error: Invalid input. Please enter numeric values."
+        return "Error: Please enter numeric values only."
+
