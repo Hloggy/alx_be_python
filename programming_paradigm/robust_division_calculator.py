@@ -1,6 +1,5 @@
-robust_division_calculator.py    
-
-try:
+def safe_divide(numerator, denominator):
+    try:
         num = float(numerator)
         denom = float(denominator)
 
